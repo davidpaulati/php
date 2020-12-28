@@ -1,18 +1,19 @@
 <?php
     function linha($semana)
     {
-        return "
-            <tr>
-                <td>{$semana[0]}</td>
-                <td>{$semana[1]}</td>
-                <td>{$semana[2]}</td>
-                <td>{$semana[3]}</td>
-                <td>{$semana[4]}</td>
-                <td>{$semana[5]}</td>
-                <td>{$semana[6]}</td>
-            </tr>
-        ";
+        $linha = '<tr>';
+        for($i = 0; $i <= 6; $i++) {
+            if(array_key_exists($i, $semana)){
+                $linha .= "<td>{$semana[$i]}</td>";
+            } else {
+                $linha .= "<td></td>";
+            }
+        }
+        $linha .= '<tr>';
+
+        return $linha;
     }
+
 
 
     function calendario()
