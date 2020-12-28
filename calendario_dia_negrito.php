@@ -55,12 +55,18 @@
         $hora = date('H:i:s');
         echo $hora;
     }
+
+    function dia(){
+       $dia = date('d/m/y');
+       echo $dia;
+    }
 ?>
 
 
 
 
 <table border ="1">
+    <?php echo dia();?>
     <?php echo hora();?>
     <?php echo saudacao();?>
     <tr>
